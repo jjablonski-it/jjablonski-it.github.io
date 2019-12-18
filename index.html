@@ -1,1 +1,296 @@
-Hello world
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dev CV</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body id="main">
+        <div class="overlay">
+            <div class="menu-i active"><div class="one"></div><div class="two"></div><div class="three"></div></div>
+            <img>
+        </div>
+        
+        <div class="nav">
+            <div class="menu-i"><div class="one"></div><div class="two"></div><div class="three"></div></div>
+        </div>
+        <a href="#main"><img class="arrow-u" src="img/arrow.png"></a>
+        <div class="banner home parallax">
+                <div class="icons">
+                    <!-- <a href="#skills"> -->
+                        <i class="devicon-python-plain-wordmark"></i><i class="devicon-csharp-plain-wordmark"></i><i class="devicon-java-plain-wordmark"></i><i class="devicon-javascript-plain"></i><i class="devicon-php-plain"></i><i class="devicon-html5-plain-wordmark"></i><i class="devicon-css3-plain-wordmark"></i>
+                    <!-- </a> -->
+                </div> 
+                <h1>Web CV<br> <span>Jakub Jabłoński</span></h1>
+                <a href="#aboutme"><img class="arrow-d" src="img/arrow.png"></a>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <a href="#main"><li class="logo"><img src="img/logo.png"></li></a>
+                <a href="#aboutme"><li>O mnie</li></a>
+                <a href="#stats"><li>Statystyki</li></a>
+                <a href="#skills"><li>Umiejętności</li></a>
+                <a href="#projects"><li>Projekty</li></a>
+                <a href="#kontakt"><li>Kontakt</li></a>
+            </ul>
+        </nav>
+
+        <div class="container parallax2">
+            <div class="block aboutme" id="aboutme">
+                <h1>O mnie<hr></h1>
+                <div class="wrap">
+                    <div class="photo item"><img src="img/logo.png"></div>
+                    <div class="info item"> 
+                        Nazywam się Jakub Jabłoński.
+                        Jestem pasjonatem programowania realizującym różnego rodzaju zlecenia od aplikacji desktopowych do stron internetowych. 
+                        <br><br>
+                        Wszystkie istotne informacje znajdują się poniżej. 
+                        W razie jakichkolwiek pytań lub ofert zapraszam do kontaktowania się
+                        ze mną. 
+                    </div>
+                </div>                
+            </div>
+
+            <div class="block stats" id="stats">
+                <h1>Statystyki<hr></h1>
+                <div class="wrap">
+                    <div class="element">
+                        <h1>One</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Two</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Three</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Four</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Five</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Six</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Seven</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element">
+                        <h1>Eight</h1>
+                        <div class="box">
+                            <div class="fill">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block skills" id="skills">  
+                <h1>Umiejętności<hr></h1>
+                <div class="wrap"> 
+                    <div class="skill tab">
+                        <h1>Aplikacje dekstopowe<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-python-plain-wordmark"></i><i class="devicon-csharp-plain-wordmark"></i>                               
+                                </div><br>
+                                Tworzenie różnego rodzaju aplikacji desktopopwych w C# oraz Pythonie 3.6 w konsoli lub z interfejsem graficznym.<br><br>
+                                Przykładowo: Program zamieniający zdjęcia na ASCII, proste boty do gier, różnego rodzaju malware, gry konsolowe.
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                    <div class="skill tab">
+                        <h1>Strony internetowe<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-javascript-plain"></i><i class="devicon-php-plain"></i><i class="devicon-html5-plain-wordmark"></i><i class="devicon-css3-plain-wordmark"></i>
+                                </div><br>
+                                Tworzenie stron internetowych od podstaw lub z użyciem CMS (np. WordPress). Podstawowe animacje i przejścia przy użyciu CSS 3 oraz JavaScript. Podstawowe operacje na bazie danych PhpMyAdmin przy użyciu PHP z poziomu strony. 
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                    <div class="skill tab">
+                        <h1>Processing<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-java-plain-wordmark"></i>
+                                </div><br>
+                                Animacje i proste gry desktopowe w Processing'u opartym na Javie. 
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                    <div class="skill tab">
+                        <h1>Unity<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-csharp-plain-wordmark"></i>      
+                                </div><br>
+                                Podstawowe umiejętności tworzenia gier i aplikacji przy użyciu Unity. Używany język programowania to C#. Platformy: Windows, Android.
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>   
+                </div> 
+            </div>
+
+            <div class="block skills coming">
+                <h1>W planach<hr></h1>
+                    <div class="wrap"> 
+                        <div class="skill">
+                            <h1>Bootstrap</h1>  
+                            <div class="fill">
+                            </div>                       
+                        </div>
+                        <div class="skill">
+                            <h1>Machine learning</h1>  
+                            <div class="fill">
+                            </div>                      
+                        </div>
+                        <div class="skill">
+                            <h1>Deep learning</h1>    
+                            <div class="fill">
+                            </div>                     
+                        </div>
+                        <div class="skill">
+                            <h1>Something</h1> 
+                            <div class="fill">
+                            </div>                        
+                        </div>
+                    </div>
+            </div>
+
+            <div class="block projects" id="projects">  
+                <h1>Przykładowe projekty<hr></h1>
+                <div class="wrap"> 
+                    <div class="project tab">
+                        <h1>Ta strona<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                        <i class="devicon-javascript-plain"></i><i class="devicon-html5-plain-wordmark"></i><i class="devicon-css3-plain-wordmark"></i>                  
+                                </div><br>
+                                <p>
+                                    Własna strona internetowa służaca jako moje internetowe CV. Stworzona od podstaw w HTML5, CSS3, JavaScript z użyciem biblioteki JQuery oraz AJAX'a.<br>
+                                    Strona zawiera liczne animacje, przejścia, ładowanie dodatkowych treści po załadowaniu strony, wersja na urządenia mobilne.
+                                    Wszystkie skrypty i arkusz stylów zostały napisane przeze mnie.
+                                </p>
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                    <div class="project tab">
+                        <h1>Konwerter zdjęć do ASCII<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-python-plain-wordmark"></i><i class="devicon-csharp-plain-wordmark"></i>                               
+                                </div><br>
+                                <p>
+                                    Aplikacja desktopowa napisana w Pythonie, jak i w C#. 
+                                    Zamienia podany obraz na plik tekstowy o wielkości wprowadzonej przez użytkownika.
+                                    Prosty, szybki program działający na podstawie obliczania ciemności danego pixela z obrazu źródłowego.
+                                    <br><br>Obliczania ciemności: sqrt(
+                                        r*r*.241 + 
+                                        g*g*.691 + 
+                                        b*b*.068)
+                                    <br>r, g, b = red, green, blue
+                                </p>
+                                <div class="preview" id="pta">
+                                </div>
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                    <div class="project tab">
+                        <h1>Cellular Automata<hr></h1>                        
+                        <div class="info">
+                                <div class="icons">
+                                    <i class="devicon-python-plain-wordmark"></i><i class="devicon-javascript-plain"></i>                          
+                                </div><br>
+                                <p>
+                                    Kilka wersji "Game of Life" autorstwa Johna Hortona Conwaya. W tym jedna pozwalająca na tworzenie swoich kształtów, zatrzymywanie i edytowanie symulacji w każdej chwili.<br>
+                                    Projekt zainspirowany materiałem poniżej: 
+                                    <div class="links">
+                                            <a href="https://www.youtube.com/watch?v=R9Plq-D1gEk" target="_blank">YouTube</a>
+                                    </div>
+                                </p>
+                                <div class="preview" id="ca">
+                                </div>
+                        </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>  
+
+                    <div class="project tab">
+                            <h1>Animacje i wizualizacje<hr></h1>                        
+                            <div class="info">
+                                    <div class="icons">
+                                            <i class="devicon-python-plain-wordmark"></i><i class="devicon-javascript-plain"></i> 
+                                    </div><br>
+                                    <p>
+                                        Wizualizacje matematycznych wzorów, problemów znalezionych w internecie. <br>
+                                        Poniższe programy zostały stworzone w oparciu o materiały z kanałów matematycznych na YouTube: <br>
+                                        <div class="links">
+                                            <a href="https://www.youtube.com/watch?v=_UtCli1SgjI" target="_blank">YouTube</a>
+                                            <a href="https://www.youtube.com/watch?v=sj8Sg8qnjOg" target="_blank">YouTube</a>
+                                            <a href="https://www.youtube.com/watch?v=qhbuKbxJsk8" target="_blank">YouTube</a>
+                                        </div>
+                                    </p>
+                                    <div class="preview" id="aw">
+                                    </div>
+                            </div>
+                        <img class="arrow-expand" src="img/arrow.png">
+                    </div>
+                </div>
+            </div>
+
+            <div class="block kontakt" id="kontakt">  
+                    <a class="anchor"  id="aboutme"></a>
+                    <h1>Kontakt<hr></h1>
+                    
+                    <div class="info item"> 
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus accusantium aut odio est, ratione ipsum tenetur, eaque fugiat veritatis ex veniam voluptates deserunt quos quo. Voluptates nisi rerum eos quidem quam incidunt sequi accusantium iure quaerat doloribus harum veniam sed vitae fugiat illo tenetur, omnis ullam reprehenderit reiciendis. Sunt facilis provident dolorum at, eos excepturi, labore quasi laudantium nesciunt autem mollitia aspernatur veritatis placeat quae totam quia laboriosam minus iusto atque magni, iure qui. Nemo, veritatis eveniet voluptates distinctio quidem quis, ab laborum cumque maxime pariatur voluptas mollitia ipsam sint dolorum, amet ad sed eius expedita at odio minima qui!
+                    </div> 
+            </div>
+        </div>
+        <div class="footer">        
+                <!--Photo by Ales Nesetril on Unsplash-->
+        </div>
+    </body>
+</html>
