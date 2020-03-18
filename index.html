@@ -8,6 +8,13 @@
       href="https://fonts.googleapis.com/css?family=Dosis&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+      crossorigin="anonymous"
+    />
+
     <meta name="viewport" content="width=device-width" />
     <link
       rel="stylesheet"
@@ -36,17 +43,15 @@
     <a href="#main"><img class="arrow-u" src="img/arrow.png"/></a>
     <div class="banner home parallax">
       <div class="icons">
-        <i class="devicon-python-plain-wordmark"></i
-        ><i class="devicon-csharp-plain-wordmark"></i
-        ><i class="devicon-java-plain-wordmark"></i
-        ><i class="devicon-javascript-plain"></i
-        ><i class="devicon-php-plain"></i
-        ><i class="devicon-html5-plain-wordmark"></i
-        ><i class="devicon-css3-plain-wordmark"></i>
+        <i class="devicon-mongodb-plain"></i>
+        <i class="devicon-express-original"></i>
+        <i class="devicon-react-original"></i>
+        <i class="devicon-nodejs-plain"></i>
+        <i class="devicon-python-plain-wordmark"></i>
       </div>
       <h1>
-        OLD SITE<br />
-        <span>New site in progress</span>
+        Portfolio<br />
+        <span>Jakub Jabłoński</span>
       </h1>
       <a href="#aboutme"><img class="arrow-d" src="img/arrow.png"/></a>
     </div>
@@ -57,10 +62,11 @@
           ><li class="logo"><img src="img/logo.png" /></li
         ></a>
         <a href="#aboutme"><li>O mnie</li></a>
-        <a href="#stats"><li>Statystyki</li></a>
         <a href="#skills"><li>Umiejętności</li></a>
-        <a href="#projects"><li>Projekty</li></a>
         <a href="#kontakt"><li>Kontakt</li></a>
+        <!-- <a href="#stats"><li>Statystyki</li></a> -->
+        <!-- <a href="#projects"><li>Projekty</li></a> -->
+        <!-- <a href="#projects"><li>Projekty</li></a> -->
       </ul>
     </nav>
 
@@ -79,63 +85,6 @@
             consequatur fuga sequi quis! Tempora velit, asperiores, fugiat
             nostrum ipsa, ullam accusantium consequuntur sequi vero iusto neque
             omnis rerum ea atque.
-          </div>
-        </div>
-      </div>
-
-      <div class="block stats" id="stats">
-        <h1>
-          Statystyki
-          <hr />
-        </h1>
-        <div class="wrap">
-          <div class="element">
-            <h1>One</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Two</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Three</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Four</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Five</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Six</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Seven</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
-          </div>
-          <div class="element">
-            <h1>Eight</h1>
-            <div class="box">
-              <div class="fill"></div>
-            </div>
           </div>
         </div>
       </div>
@@ -242,132 +191,6 @@
         </div>
       </div>
 
-      <div class="block projects" id="projects">
-        <h1>
-          Przykładowe projekty
-          <hr />
-        </h1>
-        <div class="wrap">
-          <div class="project tab">
-            <h1>
-              Ta strona
-              <hr />
-            </h1>
-            <div class="info">
-              <div class="icons">
-                <i class="devicon-javascript-plain"></i
-                ><i class="devicon-html5-plain-wordmark"></i
-                ><i class="devicon-css3-plain-wordmark"></i>
-              </div>
-              <br />
-              <p>
-                Własna strona internetowa służaca jako moje internetowe CV.
-                Stworzona od podstaw w HTML5, CSS3, JavaScript z użyciem
-                biblioteki JQuery oraz AJAX'a.<br />
-                Strona zawiera liczne animacje, przejścia, ładowanie dodatkowych
-                treści po załadowaniu strony, wersja na urządenia mobilne.
-                Wszystkie skrypty i arkusz stylów zostały napisane przeze mnie.
-              </p>
-            </div>
-            <img class="arrow-expand" src="img/arrow.png" />
-          </div>
-          <div class="project tab">
-            <h1>
-              Konwerter zdjęć do ASCII
-              <hr />
-            </h1>
-            <div class="info">
-              <div class="icons">
-                <i class="devicon-python-plain-wordmark"></i
-                ><i class="devicon-csharp-plain-wordmark"></i>
-              </div>
-              <br />
-              <p>
-                Aplikacja desktopowa napisana w Pythonie, jak i w C#. Zamienia
-                podany obraz na plik tekstowy o wielkości wprowadzonej przez
-                użytkownika. Prosty, szybki program działający na podstawie
-                obliczania ciemności danego pixela z obrazu źródłowego.
-                <br /><br />Obliczania ciemności: sqrt( r*r*.241 + g*g*.691 +
-                b*b*.068) <br />r, g, b = red, green, blue
-              </p>
-              <div class="preview" id="pta"></div>
-            </div>
-            <img class="arrow-expand" src="img/arrow.png" />
-          </div>
-          <div class="project tab">
-            <h1>
-              Cellular Automata
-              <hr />
-            </h1>
-            <div class="info">
-              <div class="icons">
-                <i class="devicon-python-plain-wordmark"></i
-                ><i class="devicon-javascript-plain"></i>
-              </div>
-              <br />
-              <p>
-                Kilka wersji "Game of Life" autorstwa Johna Hortona Conwaya. W
-                tym jedna pozwalająca na tworzenie swoich kształtów,
-                zatrzymywanie i edytowanie symulacji w każdej chwili.<br />
-                Projekt zainspirowany materiałem poniżej:
-              </p>
-
-              <div class="links">
-                <a
-                  href="https://www.youtube.com/watch?v=R9Plq-D1gEk"
-                  target="_blank"
-                  >YouTube</a
-                >
-              </div>
-
-              <div class="preview" id="ca"></div>
-            </div>
-            <img class="arrow-expand" src="img/arrow.png" />
-          </div>
-
-          <div class="project tab">
-            <h1>
-              Animacje i wizualizacje
-              <hr />
-            </h1>
-            <div class="info">
-              <div class="icons">
-                <i class="devicon-python-plain-wordmark"></i
-                ><i class="devicon-javascript-plain"></i>
-              </div>
-              <br />
-              <p>
-                Wizualizacje matematycznych wzorów, problemów znalezionych w
-                internecie. <br />
-                Poniższe programy zostały stworzone w oparciu o materiały z
-                kanałów matematycznych na YouTube: <br />
-              </p>
-
-              <div class="links">
-                <a
-                  href="https://www.youtube.com/watch?v=_UtCli1SgjI"
-                  target="_blank"
-                  >YouTube</a
-                >
-                <a
-                  href="https://www.youtube.com/watch?v=sj8Sg8qnjOg"
-                  target="_blank"
-                  >YouTube</a
-                >
-                <a
-                  href="https://www.youtube.com/watch?v=qhbuKbxJsk8"
-                  target="_blank"
-                  >YouTube</a
-                >
-              </div>
-
-              <div class="preview" id="aw"></div>
-            </div>
-            <img class="arrow-expand" src="img/arrow.png" />
-          </div>
-        </div>
-      </div>
-
       <div class="block kontakt" id="kontakt">
         <a class="anchor" id="aboutme"></a>
         <h1>
@@ -375,18 +198,11 @@
           <hr />
         </h1>
 
-        <div class="info item">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
-          accusantium aut odio est, ratione ipsum tenetur, eaque fugiat
-          veritatis ex veniam voluptates deserunt quos quo. Voluptates nisi
-          rerum eos quidem quam incidunt sequi accusantium iure quaerat
-          doloribus harum veniam sed vitae fugiat illo tenetur, omnis ullam
-          reprehenderit reiciendis. Sunt facilis provident dolorum at, eos
-          excepturi, labore quasi laudantium nesciunt autem mollitia aspernatur
-          veritatis placeat quae totam quia laboriosam minus iusto atque magni,
-          iure qui. Nemo, veritatis eveniet voluptates distinctio quidem quis,
-          ab laborum cumque maxime pariatur voluptas mollitia ipsam sint
-          dolorum, amet ad sed eius expedita at odio minima qui!
+        <div class="info item icons">
+          <i class="devicon-github-plain"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-stack-overflow"></i>
+          <i class="fas fa-at"></i>
         </div>
       </div>
     </div>
