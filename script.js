@@ -1,4 +1,5 @@
 var mobile;
+const scrollSpeed = 600;
 $(document).ready(function() {
   var menuH = $(".menu").height() - 1;
   var mmenuH = $("div.nav").height() - 1;
@@ -34,7 +35,7 @@ $(document).ready(function() {
         {
           scrollTop: $(hash).offset().top - rightH
         },
-        800
+        scrollSpeed
       );
     }
   });
@@ -49,7 +50,6 @@ $(document).ready(function() {
         .parent()
         .hasClass("skill")
     ) {
-      //W sumie to nic
     } else if (
       $(this)
         .parent()
@@ -78,34 +78,12 @@ $(document).ready(function() {
     } else {
       c.addClass("rotated");
     }
-
-    //LOAD PREVIEW
-    var prev = $(this)
-      .parent()
-      .find(".preview");
-    if (!prev.hasClass("done")) {
-      //LOAD IMAGES
-      prev.load("load.html > #" + prev.attr("id") + " > img");
-      $(document).ajaxComplete(function() {
-        //ADD ON CLICK FUNCTION
-        prev.find("img").click(function() {
-          var imgsrc = $(this).attr("src");
-          $(".overlay > img").attr("src", imgsrc);
-          $(".overlay").fadeIn(300);
-        });
-      });
-      prev
-        .hide()
-        .delay(400)
-        .slideDown(500);
-      prev.addClass("done");
-    }
   });
 
   //ARROW APPEAR
   $(".arrow-d")
     .hide()
-    .fadeIn(800);
+    .fadeIn(scrollSpeed);
 
   //HIDE OVERLAY
   $(".overlay").click(function() {
@@ -146,15 +124,15 @@ $(document).ready(function() {
     }
   });
 
-  //COLOR ICONS ON HOVER
-  $(".home > .icons > i").hover(
-    function() {
-      $(this).addClass("colored");
-    },
-    function() {
-      $(this).removeClass("colored");
-    }
-  );
+  // //COLOR ICONS ON HOVER
+  // $(".icons > i").hover(
+  //   function() {
+  //     $(this).addClass("colored");
+  //   },
+  //   function() {
+  //     $(this).removeClass("colored");
+  //   }
+  // );
 
   //GET COLOR TO ALL EXCEPT HOME
   $(".tab > .info > .icons > i").addClass("colored");
@@ -165,32 +143,17 @@ $(document).ready(function() {
       .attr("class")
       .replace(" colored", "");
 
-    //HIDE ALL OPEN
-    $("h1").each(function() {
-      if ($(this).hasClass("active")) $(this).click();
-    });
-
     //RIGHT OFFSET
     var rightH;
     if (mobile) rightH = mmenuH;
     else rightH = menuH;
 
-    //SCROLL TO SKILLS
+    //SCROLL TO CONTACT
     $("html").animate(
       {
         scrollTop: $("#skills").offset().top - rightH
       },
-      800,
-      function() {
-        $(".tab > .info > .icons > i." + ccl).each(function() {
-          $(this)
-            .parent()
-            .parent()
-            .parent()
-            .find(".arrow-expand")
-            .click();
-        });
-      }
+      scrollSpeed
     );
   });
 });
@@ -219,33 +182,18 @@ $(window).scroll(function() {
           $(this).css("visibility", "unset");
         }
       }
-      if (scroll == 0) {
-        //$(this).removeClass('anim-block');
+    });
+
+    //COLOR ICONS ON SCROLL
+    $(".icons > i").each(function() {
+      var top = $(this).offset().top - $(window).height() * 0.8;
+      if (scroll >= top) {
+        $(this).addClass("colored");
+      } else {
+        $(this).removeClass("colored");
       }
     });
   }
-
-  //LOAD STAT BARS
-  $(".stats > .wrap").each(function() {
-    var top = $(this).offset().top - $(window).height() * 0.8;
-    if (!$(this).hasClass("done") && scroll > top) {
-      $(".stats > .wrap > .element > .box > .fill")
-        .delay(200)
-        .removeClass("start");
-      $(this).addClass("done");
-    }
-  });
-
-  //LOAD STAT BARS
-  $(".coming > .wrap").each(function() {
-    var top = $(this).offset().top - $(window).height() * 0.8;
-    if (!$(this).hasClass("done") && scroll > top) {
-      $(".coming > .wrap > .skill > .fill")
-        .delay(200)
-        .removeClass("start");
-      $(this).addClass("done");
-    }
-  });
 
   //ARROWS
   $(".arrow-d").fadeOut();
@@ -269,13 +217,6 @@ $(window).scroll(function() {
       $(".home > .icons").fadeIn();
     }
   }
-
-  //CLOSE ALL TABS ON ARROW UP
-  $(".arrow-u").click(function() {
-    $("h1").each(function() {
-      if ($(this).hasClass("active")) $(this).click();
-    });
-  });
 });
 
 //FIX NAV ON RESIZE
