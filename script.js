@@ -147,14 +147,6 @@ $(document).ready(function() {
     var rightH;
     if (mobile) rightH = mmenuH;
     else rightH = menuH;
-
-    //SCROLL TO CONTACT
-    $("html").animate(
-      {
-        scrollTop: $("#skills").offset().top - rightH
-      },
-      scrollSpeed
-    );
   });
 });
 
@@ -184,15 +176,15 @@ $(window).scroll(function() {
       }
     });
 
-    //COLOR ICONS ON SCROLL
-    $(".icons > i").each(function() {
-      var top = $(this).offset().top - $(window).height() * 0.8;
-      if (scroll >= top) {
-        $(this).addClass("colored");
-      } else {
-        $(this).removeClass("colored");
-      }
-    });
+    // //COLOR ICONS ON SCROLL
+    // $("div.skill > i").each(function() {
+    //   var top = $(this).offset().top - $(window).height() * 0.8;
+    //   if (scroll >= top) {
+    //     $(this).addClass("colored");
+    //   } else {
+    //     $(this).removeClass("colored");
+    //   }
+    // });
   }
 
   //ARROWS
