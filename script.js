@@ -1,6 +1,6 @@
 var mobile;
 const scrollSpeed = 600;
-$(document).ready(function() {
+$(document).ready(function () {
   var menuH = $(".menu").height() - 1;
   var mmenuH = $("div.nav").height() - 1;
   var scroll = $(window).scrollTop();
@@ -11,7 +11,7 @@ $(document).ready(function() {
 
   if (!mobile) {
     //BETTER BLOCK APPEAR
-    $(".block").each(function() {
+    $(".block").each(function () {
       var top = $(this).offset().top - $(window).height() * 0.8;
       if (scroll <= top && !$(this).hasClass("anim-block")) {
         $(this).css("visibility", "hidden");
@@ -19,13 +19,18 @@ $(document).ready(function() {
     });
   }
 
+  //HIDE OVERLAY AFTER ANIMATION
+  setTimeout(() => {
+    $("#overlay").hide();
+  }, 1500);
+
   //RIGHT OFFSET
   var rightH;
   if (mobile) rightH = mmenuH;
   else rightH = menuH;
 
   //SMOOTH SCROLL
-  $("a").on("click", function(event) {
+  $("a").on("click", function (event) {
     if (this.hash !== "") {
       event.preventDefault();
       var hash = this.hash;
@@ -33,7 +38,7 @@ $(document).ready(function() {
       //OFFSET
       $("html, body").animate(
         {
-          scrollTop: $(hash).offset().top - rightH
+          scrollTop: $(hash).offset().top - rightH,
         },
         scrollSpeed
       );
@@ -41,38 +46,21 @@ $(document).ready(function() {
   });
 
   //SLIDE DOWN
-  $(".arrow-expand, .tab > h1").click(function() {
-    var index = $(this)
-      .parent()
-      .index();
-    if (
-      $(this)
-        .parent()
-        .hasClass("skill")
-    ) {
-    } else if (
-      $(this)
-        .parent()
-        .hasClass("project")
-    ) {
+  $(".arrow-expand, .tab > h1").click(function () {
+    var index = $(this).parent().index();
+    if ($(this).parent().hasClass("skill")) {
+    } else if ($(this).parent().hasClass("project")) {
       index += $(".skills > .wrap > .tab").length;
     }
 
     //EXPAND
-    $(".tab > .info:parent")
-      .eq(index)
-      .slideToggle(500);
+    $(".tab > .info:parent").eq(index).slideToggle(500);
 
     //H1 CLASS
-    var c = $(this)
-      .parent()
-      .find("h1")
-      .toggleClass("active");
+    var c = $(this).parent().find("h1").toggleClass("active");
 
     //ROTATE ARROW
-    var c = $(this)
-      .parent()
-      .find(".arrow-expand");
+    var c = $(this).parent().find(".arrow-expand");
     if (c.hasClass("rotated")) {
       c.removeClass("rotated");
     } else {
@@ -81,22 +69,20 @@ $(document).ready(function() {
   });
 
   //ARROW APPEAR
-  $(".arrow-d")
-    .hide()
-    .fadeIn(scrollSpeed);
+  $(".arrow-d").hide().fadeIn(scrollSpeed);
 
   //HIDE OVERLAY
-  $(".overlay").click(function() {
+  $(".overlay").click(function () {
     $(this).fadeOut(300);
   });
 
   //MENU SLIDE
-  $(".nav > .menu-i").click(function() {
+  $(".nav > .menu-i").click(function () {
     if ($(this).hasClass("active")) {
       $(this).removeClass("active");
       $("nav").animate(
         {
-          width: "0"
+          width: "0",
         },
         200
       );
@@ -104,7 +90,7 @@ $(document).ready(function() {
       $(this).addClass("active");
       $("nav").animate(
         {
-          width: "45%"
+          width: "45%",
         },
         200
       );
@@ -112,11 +98,11 @@ $(document).ready(function() {
   });
 
   //MENU SLIDE BACK ON CLICK
-  $("nav > ul > a").on("click", function(event) {
+  $("nav > ul > a").on("click", function (event) {
     if ($(window).width() <= 480) {
       $("nav").animate(
         {
-          width: "0"
+          width: "0",
         },
         200
       );
@@ -138,10 +124,8 @@ $(document).ready(function() {
   $(".tab > .info > .icons > i").addClass("colored");
 
   //EXPAND TABS ON ICON CLICK
-  $(".home > .icons > i").click(function() {
-    var ccl = $(this)
-      .attr("class")
-      .replace(" colored", "");
+  $(".home > .icons > i").click(function () {
+    var ccl = $(this).attr("class").replace(" colored", "");
 
     //RIGHT OFFSET
     var rightH;
@@ -150,7 +134,7 @@ $(document).ready(function() {
   });
 });
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   var scroll = $(window).scrollTop();
 
   if (!mobile) {
@@ -166,7 +150,7 @@ $(window).scroll(function() {
     );
 
     //BLOCK APPEAR
-    $(".block").each(function() {
+    $(".block").each(function () {
       var top = $(this).offset().top - $(window).height() * 0.8;
       if (!$(this).hasClass("anim-block")) {
         if (scroll >= top) {
@@ -212,7 +196,7 @@ $(window).scroll(function() {
 });
 
 //FIX NAV ON RESIZE
-$(window).resize(function() {
+$(window).resize(function () {
   if ($(window).width() >= 470) {
     $("nav").css("width", "100%");
     $(".nav > .menu-i").removeClass("active");
