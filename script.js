@@ -110,16 +110,6 @@ $(document).ready(function () {
     }
   });
 
-  // //COLOR ICONS ON HOVER
-  // $(".icons > i").hover(
-  //   function() {
-  //     $(this).addClass("colored");
-  //   },
-  //   function() {
-  //     $(this).removeClass("colored");
-  //   }
-  // );
-
   //GET COLOR TO ALL EXCEPT HOME
   $(".tab > .info > .icons > i").addClass("colored");
 
@@ -160,15 +150,15 @@ $(window).scroll(function () {
       }
     });
 
-    // //COLOR ICONS ON SCROLL
-    // $("div.skill > i").each(function() {
-    //   var top = $(this).offset().top - $(window).height() * 0.8;
-    //   if (scroll >= top) {
-    //     $(this).addClass("colored");
-    //   } else {
-    //     $(this).removeClass("colored");
-    //   }
-    // });
+    //COLOR ICONS ON SCROLL
+    $("div.skill > i").each(function () {
+      var top = $(this).offset().top - $(window).height() * 0.8;
+      if (scroll >= top) {
+        $(this).addClass("colored");
+      } else {
+        $(this).removeClass("colored");
+      }
+    });
   }
 
   //ARROWS
